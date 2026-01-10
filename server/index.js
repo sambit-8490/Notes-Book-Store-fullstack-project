@@ -15,7 +15,7 @@ import FyPdf from "./models/FyPdf.js";
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 mongoose.set("strictQuery", true);

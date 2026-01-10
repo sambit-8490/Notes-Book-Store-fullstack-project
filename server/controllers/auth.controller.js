@@ -21,7 +21,7 @@ async function createAndSendOtp(email, name, type = 'VERIFICATION') {
   let html = "";
 
   if (type === 'VERIFICATION') {
-    subject = "Verify Your Account - Blogify";
+    subject = "Verify Your Account - BCS Noteswala";
     html = `
       <!DOCTYPE html>
       <html>
@@ -30,26 +30,26 @@ async function createAndSendOtp(email, name, type = 'VERIFICATION') {
           body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f6f9fc; padding: 20px; }
           .container { max-width: 600px; background: #ffffff; padding: 40px; margin: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; }
           .logo { font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px; }
-          .logo span { color: #43ABE8; }
-          .otp-box { background: #f0f4f8; padding: 15px; border-radius: 8px; font-size: 32px; font-weight: bold; letter-spacing: 5px; color: #1F305E; margin: 30px 0; display: inline-block; }
+          .logo span { color: orangered; }
+          .otp-box { background: #fff0eb; padding: 15px; border-radius: 8px; font-size: 32px; font-weight: bold; letter-spacing: 5px; color: orangered; margin: 30px 0; display: inline-block; }
           .message { color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
           .footer { font-size: 12px; color: #999; margin-top: 40px; }
         </style>
       </head>
       <body>
         <div class="container">
-          <div class="logo">Blog<span>ify</span></div>
+          <div class="logo">BCS <span>Noteswala</span></div>
           <h2>Verify Your Email</h2>
           <p class="message">Hello <strong>${name}</strong>,<br/>Use the code below to verify your email address.</p>
           <div class="otp-box">${otp}</div>
           <p class="message">This code expires in 10 minutes.</p>
-          <div class="footer">© ${new Date().getFullYear()} Blogify. All rights reserved.</div>
+          <div class="footer">© ${new Date().getFullYear()} BCS Noteswala. All rights reserved.</div>
         </div>
       </body>
       </html>
     `;
   } else if (type === 'RESET_PASSWORD') {
-    subject = "Reset Your Password - Blogify";
+    subject = "Reset Your Password - BCS Noteswala";
     html = `
       <!DOCTYPE html>
       <html>
@@ -58,20 +58,20 @@ async function createAndSendOtp(email, name, type = 'VERIFICATION') {
           body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f6f9fc; padding: 20px; }
           .container { max-width: 600px; background: #ffffff; padding: 40px; margin: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center; }
           .logo { font-size: 24px; font-weight: bold; color: #333; margin-bottom: 20px; }
-          .logo span { color: #43ABE8; }
-          .otp-box { background: #f0f4f8; padding: 15px; border-radius: 8px; font-size: 32px; font-weight: bold; letter-spacing: 5px; color: #1F305E; margin: 30px 0; display: inline-block; }
+          .logo span { color: orangered; }
+          .otp-box { background: #fff0eb; padding: 15px; border-radius: 8px; font-size: 32px; font-weight: bold; letter-spacing: 5px; color: orangered; margin: 30px 0; display: inline-block; }
           .message { color: #555; font-size: 16px; line-height: 1.6; margin-bottom: 20px; }
           .footer { font-size: 12px; color: #999; margin-top: 40px; }
         </style>
       </head>
       <body>
         <div class="container">
-          <div class="logo">Blog<span>ify</span></div>
+          <div class="logo">BCS <span>Noteswala</span></div>
           <h2>Reset Password</h2>
           <p class="message">Hello <strong>${name}</strong>,<br/>You requested a password reset. Use the code below to proceed.</p>
           <div class="otp-box">${otp}</div>
           <p class="message">This code expires in 10 minutes. If you didn't request this, ignore this email.</p>
-          <div class="footer">© ${new Date().getFullYear()} Blogify. All rights reserved.</div>
+          <div class="footer">© ${new Date().getFullYear()} BCS Noteswala. All rights reserved.</div>
         </div>
       </body>
       </html>
